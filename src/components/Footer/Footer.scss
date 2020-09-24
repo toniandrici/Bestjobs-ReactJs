@@ -1,0 +1,209 @@
+@import '../../styles/vendor/include-media.scss';
+.footer {
+  
+    &__first {
+        
+        display: flex;
+        width: 100%;
+        padding: 3.2rem 0;
+        flex-wrap: wrap;
+        font-size: 1.4rem;
+
+        svg {
+            width:1.4rem;
+            height:1.4rem;
+            margin-right:2rem;
+            path {
+                fill : #77838f;
+            }
+        }
+
+        
+
+        &__1 {
+            flex-grow: 5;
+            order: 1;
+            a {
+                 img {
+                     width: 11rem;
+                 }
+                 &:after{
+                    display:none;
+                 }
+            }
+            @include media("<=tablet") {
+            flex-basis: 50%;
+            margin-bottom: 2rem;
+            }
+        }
+        &__2 {
+            flex-grow: 2;
+            order: 2;
+            @include media("<=tablet") {
+                order: 3;
+                flex-basis: 50%;
+                margin-bottom: 2rem;
+                }
+        }
+        &__3 {
+            flex-grow: 2;
+            order: 3;
+            @include media("<=tablet") {
+                order: 4;
+                flex-basis: 50%;
+                margin-bottom: 2rem;
+                }
+        }
+        &__4 {
+            flex-grow: 1;
+            order: 4;
+            @include media("<=tablet") {
+                order: 5;
+                flex-basis: 100%;
+                margin-bottom: 2rem;
+                // margin-left:50%;
+                // transform: translate(-50%);
+                text-align: center;
+                }
+        }
+        &__5 {
+            flex-grow: 1;
+            order: 5;
+          
+
+            svg {
+                margin-right: 0;
+            }
+
+            @include media("<=tablet") {
+               order: 2;
+               flex-basis: 50%;
+               margin-bottom: 2rem;
+               }
+        }
+
+         ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          li {
+              padding: 1rem 0;
+              color: #77838f;
+              cursor: pointer;
+         
+         &:hover{
+             color: #666;
+         } }
+          
+         }
+      
+         h4 {
+             margin-bottom: 0;
+          small {
+              color:#999;
+          }
+      }
+
+
+      select {
+        border: none;
+        margin: 0;
+        padding: 0;
+        font-size:1.5rem;
+        color: #77838f;
+        outline: none;
+        
+        width:65%;
+  
+
+      }
+
+
+    
+    }
+    &__last {
+        display: block;
+        padding:1.3rem .6rem;
+        color:#999;
+       border-top: 1px solid #999;
+        text-align: center;
+        font-size: 1.1rem;
+    }
+
+&__group{
+    &__first {
+        margin-bottom:2rem;
+    }
+}
+  
+       
+            &__small__button {
+                background-color:  #77838f;
+                cursor: pointer;
+                color: #fff;
+                padding: .2rem;
+                border-radius: 3px;
+                small {
+                    font-size: 1rem;
+                    font-weight: 500;
+                }
+            }
+
+            &__big {
+                display:flex;
+               
+
+                @include media("<=tablet") {
+
+                    justify-content: center;
+                }
+               &__button {
+                    color: #8c98a4;
+                    
+                    align-items: center;
+                    padding:.5rem 1rem;
+                    margin-right:.5rem;
+                    cursor: pointer;
+                    svg {
+                        width: 2.2rem;
+                        height: 2.2rem;
+                        vertical-align: super;
+                        path {
+                            fill :#77838f;
+                        }
+                    }
+                    border: 1px solid transparent;
+                    border-color: #8c98a4;
+                    border-radius: 4px;
+                    h3 {
+                        color:#77838f;
+                        margin: 0;
+                        font-size:1.4rem;
+    
+                    }
+    
+                    &:hover{
+                        background-color: #8c98a4;
+                        color: #fff;
+                        svg {
+                            path {
+                                fill: #fff;
+                            }
+                        }
+    
+                        h3 {
+                            color: #fff;
+                        }
+                    }
+
+                    &__right{
+                        display: inline-block;
+                    }
+                }
+
+            }
+         
+        
+    
+
+}

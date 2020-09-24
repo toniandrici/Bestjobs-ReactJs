@@ -1,0 +1,6 @@
+@each $color-name, $brand-color in $brand-colors {
+
+	.u-bg-#{$color-name} {
+		background-color: $brand-color;
+	}
+}

@@ -1,0 +1,78 @@
+  
+@import '../../styles/vendor/include-media.scss';
+
+.Button {
+    margin: .6rem 0;
+    background-color: blue;
+   
+    border-radius: 3px;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    padding: .5rem .9rem;
+    border: 1px solid transparent;
+    white-space: nowrap;
+  transition: all .2s;
+font-size: 1.4rem;
+font-weight: 300;;
+  &__not__mobile {
+
+    @include media("<=tablet") {
+     display: none;
+    }
+
+  }
+
+  &__center{
+     margin-left: 50%;
+     transform: translateX(-50%);
+  }
+
+    svg {
+        width: 1.7rem;
+        height: 1.7rem;
+    }
+
+    &__primary {
+        background-color: #29599c;
+        border-color: #244d88;
+        &:hover{
+            -webkit-transform: translateY(-3px);
+            transform: translateY(-3px);
+        color: #fff;
+        background-color: #1e4274;
+         border-color: #173257;
+        }
+    }
+    &__default {
+        font-weight: bold;
+        color:#29599c;
+        background-color: #fff;
+        border-color: #244d88;
+&:hover {
+    background-color: #1e4274;
+    border-color: #173257;
+    color: #fff;
+}
+    }
+
+    &__defaultB{
+        border-color: #ccc;
+        color: #333;
+        background-color: #fff;
+        &:hover {
+            background-color:#f7f7f7; 
+        }
+    }
+
+    &__success {
+        color: #fff;
+        background-color: #5fbb46;
+         border-color: #55a93e;
+        &:hover {
+            background-color: #4c9737;
+            border-color: #3f7d2e;
+        }
+    }
+}
+

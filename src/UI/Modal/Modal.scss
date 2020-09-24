@@ -1,0 +1,297 @@
+@import '../../styles/vendor/include-media.scss';
+
+
+.modal {
+    position: fixed;
+    z-index: 500;
+    // background-color: black;
+    background-color: rgba(71, 67, 62, 0.5);
+    opacity: 0.1;
+    width: 100%;
+    height:100%;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px black;
+    padding: 1.6rem;
+    box-sizing: border-box;
+    // transition: all 0.3s ease-out;
+    z-index: 3;
+    top: 0;
+    left:0;
+    overflow: auto;
+    font-size: 1.4rem;
+
+    button {
+        padding: 1rem 4rem;
+
+        svg {
+            width: 1.4rem;
+            height: 1.4rem;
+            margin-right: .5rem;
+            // path {
+            //     fill :#999;
+            // }
+        }
+    }
+
+    @include media("<=tablet-middle") {
+        width: 100%;
+        top: 0;
+        left: 0;
+        padding: 0;
+        }
+
+&__bigDescription {
+    margin: 4rem 0;
+}
+&__finalButton {
+    width: 100%;
+    position: relative;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+    &__description {
+      display: block;
+      margin: 3rem 0;
+        &_label {
+            color:#999;
+            font-weight: bold;
+            font-size: 1.4rem;
+            display: inline-block;
+            width:30%;
+
+            @include media("<=tablet") {
+                width: 100%;
+                
+                }
+
+            svg {
+                width: 1.4rem;
+                height: 1.4rem;
+                margin-right: 1rem;
+                path {
+                    fill :#999;
+                }
+            }
+        }
+        &_text {
+            display:inline-block;
+            width: 70%;
+            vertical-align: top;
+            color: #333;
+
+            @include media("<=tablet") {
+                width: 100%;
+                margin-left: 2.5rem;
+                }
+        }
+       
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        
+    }
+
+    &__spans
+    {
+        margin: 2rem 0;
+        display: flex;
+        flex-wrap: wrap;
+        span {
+            background-color: #F5F5F5;
+            font-size: 1.1rem;
+            padding: .5rem 1rem;
+            margin-right: 1rem;
+            border-radius: 1rem;
+            cursor: pointer;
+
+        }
+        a {
+            margin-top: .5rem;
+            font-size: 1.1rem;
+        }
+    }
+    header{
+        display:flex;
+        // flex-wrap: wrap;
+        justify-content: space-between;
+     
+        
+        margin :2rem 1rem 1rem 1rem;
+        border-bottom:1px solid transparent;
+        border-color:#e5e5e5;
+
+        svg {
+            width: 2rem;
+            height: 2rem;
+           
+            cursor: pointer;
+            path {
+                fill :#999;
+            }
+        }
+        h3 {
+            font-size:1.4rem;
+           margin-bottom: 1rem;
+        }
+    }
+
+    &__container {
+        // width: 75%;
+        background: white;
+        opacity: 1;
+        position: relative;
+        border-radius: 5px;
+        padding: 1rem;
+        /* height: 100%; */
+        width: 900px;
+        margin: 0 auto;
+
+
+        @include media("<=tablet-middle") {
+     
+
+            width: 100%;
+            top: 0;
+            left: 0;
+            }
+
+
+        &__wrapper {
+            display: flex;
+            width: 100%;
+            align-items: flex-start;
+            justify-content:space-between;
+            padding: 2rem;
+           
+
+             @include media("<=tablet") {
+                flex-wrap: wrap;
+padding: 0;
+             }
+        }
+      
+        &__left{
+            padding: 2rem;
+            @include media("<tablet") {
+                padding: 0rem;
+            }
+        }
+      &__right {
+        // padding: 2rem 0;
+      }
+
+        &__footer {
+            background-color: #EDEFF2;
+            margin:2rem;
+            padding:4rem 3rem;
+            h3{
+                margin-bottom: 3rem;
+            }
+
+
+            @include media("<tablet") {
+                
+                margin: 0;
+                padding:3rem 1rem;
+
+            }
+        }
+    }
+   
+   
+
+    &__header {
+        display: flex;
+        width: 100%;
+        h1{
+            margin: 0;
+            padding: 0;
+            font-weight: 100;
+            font-size:2.5rem;
+        }
+
+        a {
+            text-decoration: underline;
+            color: #999;
+            @include media("<=tablet") {
+display: block;
+margin: 1rem 0;
+            }
+        }
+        p {
+            color: #999;
+            @include media("<=tablet") {
+                margin:1rem 0;
+            }
+        }
+        &__imgA {
+               width:11.8rem;
+               height: 6rem;
+               margin-right: 2rem;
+               margin-bottom: 2rem;
+               img {
+                   width: 100%;
+                   height: 100%;
+                   object-fit: cover;
+
+               } 
+        }
+
+        &__imgB {
+           
+           
+            margin: 2rem;
+            margin-top : 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            @include media("<=tablet") {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+           
+            &__wrapper {
+                width: 16rem;
+                height: 10rem;
+                margin-bottom: 1rem;
+                background-color:#EDEFF2;
+                border-radius: 2rem;
+                position: relative;
+                img {
+                    width: 14rem;
+                    height: 8rem;
+                    border-radius: 1.5rem;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+    
+                } 
+            }
+          
+     }
+
+
+     @include media("<=tablet") {
+        flex-direction: column;
+        
+        }
+    }
+
+
+    // &__close {
+    //    margin-right:2rem;
+    // }
+}
+
+// @media (min-width: 600px) {
+//     .modal {
+//         width: 500px;
+//         left: calc(50% - 250px);
+//     }
+// }

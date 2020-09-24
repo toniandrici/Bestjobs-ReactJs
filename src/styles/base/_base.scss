@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    display: block;
+    font-size: 10px;
+    font-family: $font-family;
+    line-height: 1.428571429;
+
+    @include media("<tablet-small") {
+        font-size: 9px;
+    }
+   
+}
+
+
+.wrapper {
+    width: 96%;
+    max-width: $wrapper-width;
+    margin: 0 auto;
+}
+
+img[src*='.svg'] {
+    width: 100%;
+}
+
+img.responsive-img {
+    width: 100%;
+    color: brand-color('black');
+}
+
+.test-only-box {
+    width: 100%;
+    min-height: 360px;
+    height: 100%;
+    background: $c-error;
+}
+
+.docs-test-box {
+    display: block;
+    height: 60px;
+    background-color: $c-error;
+}

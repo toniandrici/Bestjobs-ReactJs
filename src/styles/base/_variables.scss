@@ -1,0 +1,41 @@
+$font-family: "Open Sans",Helvetica,Arial,sans-serif;;
+$wrapper-width: 1130px;
+$wrapper-width-no-px: 1200;
+
+$gutter: 12px;
+$gutter-large: 40px;
+
+
+
+$header-height-mobile: 62px;
+$header-height: 94px;
+
+$weight-regular: 400;
+$weight-semi-bold: 600;
+$weight-bold: 700;
+
+
+$brand-colors: (
+    'white': #fff,
+    'black': #000,
+    'red': #f00,
+    'light-grey': #edf3f8,
+    'medium-grey': #414a5c
+);
+
+@function brand-color($key: 'white') {
+    @return map-get($brand-colors, $key);
+}
+
+$c-error: #f00;
+$c-valid: #2b2;
+
+// $p-images: '/_dummy/';
+// $p-base-images: '/images/';
+// $p-icons: '/images/icons';
+
+@keyframes shimmer {
+	100% {
+		transform: translateX(100%);
+	}
+}

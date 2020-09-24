@@ -1,0 +1,26 @@
+.u-gutter {
+
+	&-margin-top-small {
+		margin-top: $gutter / 2;
+	}
+
+	&-margin-bottom-small {
+		margin-bottom: $gutter / 2;
+	}
+
+	&-margin-top {
+		margin-top: $gutter;
+	}
+
+	&-margin-bottom {
+		margin-bottom: $gutter;
+	}
+
+	&-margin-top-large {
+		margin-top: $gutter-large * 2;
+	}
+
+	&-margin-bottom-large {
+		margin-bottom: $gutter-large * 2;
+	}
+}

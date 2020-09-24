@@ -1,0 +1,9 @@
+.u-align {
+    display: flex;
+    width: 100%;
+
+    &--center {
+        text-align: center;
+        justify-content: center;
+    }
+}

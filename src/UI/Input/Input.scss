@@ -1,0 +1,269 @@
+@import '../../styles/vendor/include-media.scss';
+
+.react__select {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  
+  .react__select__trigger {
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    height: 3.1rem;
+    padding: .6rem 2.7rem .6rem 6rem;
+    font-size: 1.4rem;
+    text-align: left;
+    border-radius: .3rem;
+    border: 1px solid #d3d4d4;
+    outline: 0;
+    cursor: pointer;
+    position: relative;
+    background: {
+      color: #fff;
+      image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="21px" height="21px" viewBox="0 0 21 21"><polygon points="10.5,12 7,8.5 14,8.5"/></svg>');
+      repeat: no-repeat;
+      position: calc(100% - 5px) center;
+    }
+  
+    &, &:active {
+      color: black;
+    }
+  
+ 
+    &.react__select__target__attached__top {
+      border-radius: 0 0 .3rem 3rem;
+    }
+  
+    &.react__select__target__attached__bottom {
+      border-radius: .3rem .3rem 0 0;
+    }
+  
+    // truncate children with ellipsis
+    * {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  
+  .react_select__trigger__option {
+    user-select: none;
+  
+    & + & {
+      margin-left: 6px;
+    }
+  
+    .react__select__trigger__multiple & {
+      padding: 0 .3rem;
+      border-radius: 2px;
+      background: #E6F9FF;
+    }
+  }
+  
+  .react__select__trigger__arrow {
+    position: absolute;
+    right: .6rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .react__select__menu {
+    max-height: 18rem;
+    padding: .3rem 0;
+    border: 1px solid #e1e1e1;
+    border-radius: 0 0 .3rem 3rem;
+    box-shadow: 0 .2rem .4rem 0 rgba(218, 221, 222, 0.35);
+    background-color: white;
+    overflow-x: hidden;
+    overflow-y: auto;
+    pointer-events: none;
+    -webkit-tap-highlight-color: transparent;
+  
+    .react__select__enabled & {
+      pointer-events: auto;
+    }
+  
+    .react__select__element__attached__top  & {
+      margin-top: -1px;
+      border-top: 0;
+    }
+  
+    .react__select__element__attached__bottom  & {
+      margin-top: 1px;
+      border-bottom: 0;
+      border-radius: 3px 3px 0 0;
+      box-shadow: 0 -2px 4px 0 rgba(218, 221, 222, 0.35);
+    }
+  }
+  
+  .react__select__header {
+    display: flex;
+    padding: 8px;
+    border-bottom: 1px solid #F1F3F5;
+    border-top: 1px solid #F1F3F5;
+  }
+  
+  .react__select__btn {
+    flex: 1;
+  }
+  
+  .react__select__options {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  .react__select__option {
+    display: flex;
+    align-items: center;
+    padding: .4rem .8rem;
+    font-size: 1.4rem;
+    text-indent: .4prem;
+    border-radius: .2rem;
+    cursor: pointer;
+    user-select: none;
+  
+    &:hover {
+      background: #FBFBFB;
+    }
+  }
+  
+  .react__select__option__label {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .react__select__optgroup {
+    display: block;
+    padding: .3rem 0;
+    cursor: default;
+    border-top: 1px solid #F1F3F5;
+  
+    &:first__child {
+      border: 0;
+    }
+  }
+  
+  .react__select__optgroup__title {
+    display: block;
+    padding: .8rem 1.2rem .6rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #909294;
+    user-select: none;
+  }
+
+
+
+.input__group {
+    display: flex;
+   align-items: center;
+   margin-right:1.2rem;
+   width:100%;
+   padding: .6rem 0;
+
+
+   
+
+   @include media("<=tablet") {
+    margin-right: 0;
+   
+}
+
+    &__addon {
+
+
+        span {
+            padding: 20px 22px 20px 28px;
+            border: 1px solid #ccc;
+            border-radius: 3px 0 0 3px;
+            border-right: none;
+            position: relative;
+            display:block;
+            svg {
+                position: absolute;
+                left: 50%;
+                right: 50%;
+                transform: translate(-50%, -50%);
+                width:1.7rem;
+                height:1.7rem;
+                path {
+                  fill: #666;
+                }
+            }
+        }
+    }
+
+
+    &__addonB {
+
+
+      span {
+          padding: 20px 22px 20px 28px;
+          border: 1px solid #ccc;
+          border-radius: 3px 0 0 3px;
+          border-left: none;
+          position: relative;
+          display:block;
+          svg {
+              position: absolute;
+              left: 50%;
+              right: 50%;
+              transform: translate(-50%, -50%);
+              width:1.7rem;
+              height:1.7rem;
+
+
+              path{
+                fill :#5fbb46;
+              }
+          }
+      }
+  }
+
+
+}
+
+.Label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: .8rem;
+
+}
+.InputElement {
+   
+    outline: none;
+    border: 1px solid  #ccc;
+    border-radius: 0 .3rem .3rem 0;
+    color:  #d8ddf0; 
+    padding: .6rem 1rem;
+    width: 100%;
+    height:42px;
+    border-left: none;
+    color:#666;
+    font-size: 1.4rem;;
+    &__not__mobile {
+
+      @include media("<=tablet") {
+       display: none;
+      }
+
+    }
+  
+&__border{
+  border-right: none;
+}
+   
+}
+
+
+.Invalid {
+    border: 1px solid red;
+    background-color: #FDA49A;
+}

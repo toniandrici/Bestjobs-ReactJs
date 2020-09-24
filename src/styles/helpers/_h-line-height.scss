@@ -1,0 +1,7 @@
+@mixin line-height($mobile, $tablet, $breakpoint) {
+	line-height: $mobile;
+
+	@include media($breakpoint) {
+		line-height: $tablet;
+	}
+}

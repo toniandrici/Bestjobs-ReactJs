@@ -1,0 +1,25 @@
+@import '../../styles/vendor/include-media.scss';
+
+.popover {
+    position: relative;
+  
+    &__not__mobile {
+
+        @include media("<=tablet") {
+         display: none;
+        }
+    
+      }
+      &__not__desktop {
+
+        @include media(">tablet") {
+         display: none;
+        }
+    
+      }
+
+      @include media("<=tablet") {
+
+
+      }
+}

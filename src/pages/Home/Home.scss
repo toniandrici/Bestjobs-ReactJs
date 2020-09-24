@@ -1,0 +1,15 @@
+.home {
+    &__main {
+    background-color: #EDEFF2;
+    overflow-x: hidden;
+
+}
+&__button {
+    margin:3rem;
+    margin-left:50%;
+    transform: translateX(-50%);
+    button {
+        padding: 1rem 3rem;
+    }
+}
+}

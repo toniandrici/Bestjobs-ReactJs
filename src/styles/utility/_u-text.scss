@@ -1,0 +1,6 @@
+@each $color-name, $brand-color in $brand-colors {
+
+    .u-text-#{$color-name} {
+        color: $brand-color;
+    }
+}
